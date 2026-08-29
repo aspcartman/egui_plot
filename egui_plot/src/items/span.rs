@@ -9,11 +9,9 @@ use egui::Shape;
 use egui::Stroke;
 use egui::TextStyle;
 use egui::Ui;
-use egui::Vec2;
 use egui::epaint::PathStroke;
 use egui::epaint::TextShape;
 use egui::pos2;
-use emath::TSTransform;
 
 use crate::aesthetics::LineStyle;
 use crate::axis::Axis;
@@ -232,7 +230,8 @@ impl Span {
         // center of the text shape
         let text_pos = pos2(text_pos_x + width / 2.0, text_pos_y + height / 2.0);
 
-        text_shape.transform(TSTransform::from_translation(Vec2::new(text_pos.x, text_pos.y)));
+        // The span label only needs a planar translation; preserve the text shape's rotation.
+        text_shape.pos += text_pos.to_vec2();
 
         shapes.push(text_shape.into());
     }
