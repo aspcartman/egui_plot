@@ -53,10 +53,10 @@ ahash = { version = "0.8.12", default-features = false, features = [
 assertables = "9.8.2"
 document-features = "0.2.12"
 # Keep the complete egui family on the Transform3D-enabled master branch.
-eframe = { git = "https://github.com/aspcartman/egui.git", branch = "master", default-features = false }
-egui = { git = "https://github.com/aspcartman/egui.git", branch = "master", default-features = false }
-egui_kittest = { git = "https://github.com/aspcartman/egui.git", branch = "master", default-features = false }
-emath = { git = "https://github.com/aspcartman/egui.git", branch = "master", default-features = false }
+eframe = { git = "https://github.com/aspcartman/egui.git", branch = "main", default-features = false }
+egui = { git = "https://github.com/aspcartman/egui.git", branch = "main", default-features = false }
+egui_kittest = { git = "https://github.com/aspcartman/egui.git", branch = "main", default-features = false }
+emath = { git = "https://github.com/aspcartman/egui.git", branch = "main", default-features = false }
 env_logger = { version = "0.11.8", default-features = false, features = [
     "auto-color",
     "humantime",
